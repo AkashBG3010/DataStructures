@@ -17,5 +17,6 @@ public class LinkedListProblem {
         myLinkedList.deleteKey(myFourthNode);
         myLinkedList.printMyNodes();
         myLinkedList.size();
+        
     }
 }

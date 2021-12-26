@@ -1,13 +1,12 @@
 package com.bridgelabz.linkedlist;
 
 public class MyLinkedList {
-
 	public   INode head;
     public   INode tail;
 
     public MyLinkedList(){
-            this.head = null;
-            this.tail = null;
+    	this.head = null;
+    	this.tail = null;
         }
 
     public void add(INode newNode) {
@@ -24,42 +23,43 @@ public class MyLinkedList {
         }
 
     }
-    	public void append(INode newNode){
-            if(this.head == null){
-                this.head=newNode;
+    public void append(INode newNode){
+    	if(this.head == null){
+        this.head=newNode;
+        }
+        if(this.tail== null){
+        	this.tail=newNode;
             }
-            if(this.tail== null){
-                this.tail=newNode;
-            }else{
-                this.tail.setNext(newNode);
-                this.tail=newNode;
+        else{
+            this.tail.setNext(newNode);
+            this.tail=newNode;
             }
     		}
-    	public void insert(INode myNode ,INode newNode){
-    	        INode tempNode = myNode.getNext();
-    	        myNode.setNext(newNode);
-    	        newNode.setNext(tempNode);
-    	        }
+    public void insert(INode myNode ,INode newNode){
+    	INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
+        }
     	public INode popLast(){
-    	        INode tempNode = this.head;
-    	        tempNode = tempNode.getNext();
-    	        tempNode.setNext(null);
-    	        return tail;
-    	        }
-    	 public void size(){
-    	        int counter = 1;
-    	        INode tempNode = this.head;
-    	        while(tempNode != this.tail) {
-    	            if (tempNode.getNext() == null) {
+    		INode tempNode = this.head;
+	        tempNode = tempNode.getNext();
+	        tempNode.setNext(null);
+	        return tail;
+	        }
+    	public void size(){
+    		int counter = 1;
+	        INode tempNode = this.head;
+	        while(tempNode != this.tail) {
+	            if (tempNode.getNext() == null) {
 
-    	            } else {
-    	                tempNode = tempNode.getNext();
-    	                counter++;
-    	            }
+	            } else {
+	                tempNode = tempNode.getNext();
+	                counter++;
+	            }
 
-    	        }
-    	            System.out.println("Size of current Linked List is: "+counter);
-    	 }
+	        }
+	        System.out.println("Size of current Linked List is: "+counter);
+    	}
     	public void search(INode myNode) {
             INode tempNode = this.head;
             while(tempNode != null ) {
