@@ -1,7 +1,7 @@
 package com.bridgelabz.hashtables;
 
-public class MyMapNode<K extends Comparable, V > implements INode <K> {
-    K key; 
+public class MyMapNode<K , V > implements INode <K> {
+    K key;
     V  value;
     MyMapNode <K , V> next;
 
@@ -21,7 +21,6 @@ public class MyMapNode<K extends Comparable, V > implements INode <K> {
         this.key=key;
     }
     public INode<K>getNext() {
-        // TODO Auto-generated method stub
         return next;
     }
     public V getValue() {
