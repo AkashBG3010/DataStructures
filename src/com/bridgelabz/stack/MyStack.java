@@ -17,6 +17,8 @@ public class MyStack {
 	}
 	public INode pop() {
 		return myLinkedList.popLast();
-
+	}
+	public int size() {
+		return myLinkedList.size();
 	}
 }
