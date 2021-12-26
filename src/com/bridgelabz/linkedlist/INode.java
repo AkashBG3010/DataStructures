@@ -1,6 +1,6 @@
 package com.bridgelabz.linkedlist;
 
-public class INode<K> {
+public interface INode<K> {
 
 	K getKey();
     void setKey();
