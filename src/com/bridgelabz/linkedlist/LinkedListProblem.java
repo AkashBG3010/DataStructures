@@ -9,8 +9,8 @@ public class LinkedListProblem {
         
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.add(myFirstNode);
-        myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
+        myLinkedList.insert(myFirstNode,mySecondNode);
         myLinkedList.printMyNodes();
     }
 }
