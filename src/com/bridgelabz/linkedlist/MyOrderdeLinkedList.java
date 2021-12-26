@@ -7,7 +7,7 @@ public class MyOrderdeLinkedList {
     static int count =1;
     INode temp ;
     
-    public MyOrderedLinkedList(){
+    public void MyOrderedLinkedList() {
         this.head = null;
         this.tail = null;
     }
