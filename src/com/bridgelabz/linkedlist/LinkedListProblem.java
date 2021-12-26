@@ -11,7 +11,7 @@ public class LinkedListProblem {
         myLinkedList.add(myFirstNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.insert(myFirstNode,mySecondNode);
-        myLinkedList.popLast();
+        myLinkedList.search(mySecondNode);
         myLinkedList.printMyNodes();
     }
 }

@@ -10,7 +10,7 @@ public class MyLinkedList {
             this.tail = null;
         }
 
-    	public void add(INode newNode) {
+    public void add(INode newNode) {
         if(this.tail == null){
             this.tail=newNode;
         }
@@ -35,18 +35,28 @@ public class MyLinkedList {
                 this.tail=newNode;
             }
     		}
-    	 public void insert(INode myNode ,INode newNode){
+    	public void insert(INode myNode ,INode newNode){
     	        INode tempNode = myNode.getNext();
     	        myNode.setNext(newNode);
     	        newNode.setNext(tempNode);
     	        }
-    	 public INode popLast(){
+    	public INode popLast(){
     	        INode tempNode = this.head;
     	        tempNode = tempNode.getNext();
     	        tempNode.setNext(null);
     	        return tail;
     	        }
-    	 public  void printMyNodes(){
+    	public void search(INode myNode) {
+            INode tempNode = this.head;
+            while(tempNode != null ) {
+                if (myNode.getKey() == tempNode.getKey()) {
+                    System.out.println("Element found :"+myNode.getKey());
+                    break;
+                }
+                tempNode=tempNode.getNext();
+            }
+        }
+     public  void printMyNodes(){
     		StringBuffer myNodes = new StringBuffer("My Nodes:");
     		INode tempNode = head;
     		while(tempNode.getNext()!= null){
